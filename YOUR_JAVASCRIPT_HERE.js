@@ -1,7 +1,7 @@
 // Write your JS here
 
 // Hero Object
-let hero = {};
+const hero = {};
 hero.name = '';
 hero.heroic = new Boolean();
 hero.inventory = [];
