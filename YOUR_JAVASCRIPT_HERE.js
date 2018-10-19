@@ -10,3 +10,7 @@ hero.weapon = {
   type: '',
   damage: 2
 };
+
+const rest = function() {};
+const pickUpItem = function() {};
+const equipWeapon = function() {};
