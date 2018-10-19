@@ -12,6 +12,10 @@ hero.weapon = {
 };
 
 // Game logic functions
-const rest = function() {};
+const rest = function(obj) {
+  obj.health = 10;
+  return obj;
+};
+
 const pickUpItem = function() {};
 const equipWeapon = function() {};
