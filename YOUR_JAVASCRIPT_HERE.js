@@ -11,6 +11,7 @@ hero.weapon = {
   damage: 2
 };
 
+// Game logic functions
 const rest = function() {};
 const pickUpItem = function() {};
 const equipWeapon = function() {};
