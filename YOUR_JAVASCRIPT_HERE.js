@@ -17,8 +17,8 @@ const rest = function(obj) {
   return obj;
 };
 
-const pickUpItem = function(_hero, _weapon) {
-  _hero.inventory.push(_weapon);
+const pickUpItem = function(hero, weapon) {
+  hero.inventory.push(weapon);
 };
 
 const equipWeapon = function() {};
