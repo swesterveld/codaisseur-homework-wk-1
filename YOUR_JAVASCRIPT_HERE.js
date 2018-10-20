@@ -1,15 +1,17 @@
 // Write your JS here
 
+const weapons = [
+  { type: 'dagger', damage: 2},
+  { type: 'rope', damage: 2}
+]
+
 // Hero Object
 const hero = {};
 hero.name = '';
 hero.heroic = true;
 hero.inventory = [];
 hero.health = 10;
-hero.weapon = {
-  type: 'rope',
-  damage: 2
-};
+hero.weapon = weapons[Math.round(Math.random(2))]
 
 // Game logic functions
 const rest = function(obj) {
