@@ -19,11 +19,17 @@ const rest = function(obj) {
 
 const pickUpItem = function(hero, weapon) {
   hero.inventory.push(weapon);
+  console.log("You picked up a " + weapon.type);
+  displayStats();
 };
 
 const equipWeapon = function(hero) {
   if (hero.inventory.length > 0) {
     hero.weapon = hero.inventory[0];
+    console.log(`You took a ${hero.weapon.type} from your bag.`)
+    displayStats();
+  } else {
+    console.log("You don't have any weapon in your bag.");
   }
 };
 
