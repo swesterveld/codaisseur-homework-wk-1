@@ -23,7 +23,11 @@ const pickUpItem = function(hero, weapon) {
   hero.inventory.push(weapon);
   console.log("You picked up a " + weapon.type);
   displayStats();
-  document.getElementById(weapon.type).remove();
+  if (weapon.type) {
+    // Sanity check because the test is using an invalid (empty) weapon object,
+    // which will make this line fail.
+    document.getElementById(weapon.type).remove()
+  };
 };
 
 const equipWeapon = function(hero) {
