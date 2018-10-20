@@ -2,12 +2,12 @@
 
 // Hero Object
 const hero = {};
-hero.name = '';
-hero.heroic = new Boolean();
+hero.name = 'Corry King';
+hero.heroic = true;
 hero.inventory = [];
 hero.health = 10;
 hero.weapon = {
-  type: '',
+  type: 'rope',
   damage: 2
 };
 
@@ -30,3 +30,13 @@ const equipWeapon = function(hero) {
 const resetHealth = function() {
   hero.health = 10;
 };
+
+const displayStats = function() {
+  console.log(`
+  name: ${hero.name}
+  health: ${hero.health}
+  weapon: ${hero.weapon.type} (damage=${hero.weapon.damage})
+  `)
+}
+
+displayStats()
