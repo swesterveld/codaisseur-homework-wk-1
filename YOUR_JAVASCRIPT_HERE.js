@@ -59,9 +59,9 @@ const displayStats = function() {
     `name: ${hero.name}`,
     `health: ${hero.health}`,
     `weapon: ${hero.weapon.type} (damage=${hero.weapon.damage})`
-  ]
-  let statistics = document.getElementById('stats')
-  statistics.innerHTML = stats.join('<br />')
+  ];
+  let statistics = document.getElementById('stats');
+  statistics.innerHTML = stats.join('<br />');
 };
 
 // Initialize game with the right settings
