@@ -17,7 +17,10 @@ const rest = function(obj) {
   return obj;
 };
 
-const pickUpItem = function() {};
+const pickUpItem = function(_hero, _weapon) {
+  _hero.inventory.push(_weapon);
+};
+
 const equipWeapon = function() {};
 
 const resetHealth = function() {
