@@ -51,3 +51,29 @@ const initGame = function() {
     }
   }
 }
+
+// An array of available heroes a player could choose from
+const playerOptions = [
+  { id: 'kitten', name: 'Killer Kitten', url: 'placekitten.com'},
+  { id: 'puppy', name: 'Power Puppy', url: 'placepuppy.net'},
+]
+
+// Add the available heroes as options to the form on the page
+let fieldset = document.getElementById('heroes')
+playerOptions.forEach(function(p) {
+  let radioItem = document.createElement('input')
+  radioItem.type = 'radio'
+  radioItem.id = p.id
+  radioItem.name = 'player'
+  radioItem.value = p.name
+  radioItem.setAttribute('onclick', 'initGame()')
+  radioItem.addEventListener('click', initGame)
+
+  let labelItem = document.createElement('label')
+  labelItem.setAttribute('for', p.id)
+  labelItem.innerHTML = p.name
+
+  let heroItem = fieldset.appendChild(document.createElement('div'))
+  heroItem.appendChild(radioItem)
+  heroItem.appendChild(labelItem)
+})

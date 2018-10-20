@@ -11,6 +11,13 @@
   <img id="dagger" src="https://dummyimage.com/200x200/ccc/fff&text=dagger" alt="a dagger to pick up" onclick="pickUpItem(hero,{'type':'dagger','damage':2})"/>
   <img id="bag" src="https://dummyimage.com/300x300/963/fff&text=bag" alt="a bag to take a weapon from" onclick="equipWeapon(hero)"/>
 
+  <form onsubmit="return false">
+    <fieldset id="heroes">
+      <legend>Select your hero</legend>
+      <!-- A list of heroes will be populated by JavaScript -->
+    </fieldset>
+  </form>
+
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
   <div id="mocha"></div>
