@@ -47,6 +47,7 @@ const fightEnemy = function(hero) {
     displayStats();
   } else {
     console.log("The enemy was stronger than you expected. You died.");
+    // TODO: reset the screen
     displayStats();
   }
 
