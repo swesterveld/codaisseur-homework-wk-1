@@ -3,12 +3,13 @@
   <meta charset="utf-8">
   <title>Mocha Tests</title>
   <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
   <!-- YOUR HTML HERE -->
-  <img id="inn" src="https://dummyimage.com/150x150/c00/fff&text=inn" alt="an inn to get some rest" onclick="resetHealth()"/>
-  <img id="dagger" src="https://dummyimage.com/150x150/ccc/fff&text=dagger" alt="a dagger to pick up" onclick="pickUpItem(hero,{'type':'dagger','damage':2})"/>
-  <img id="bag" src="https://dummyimage.com/150x150/963/fff&text=bag" alt="a bag to take a weapon from" onclick="equipWeapon(hero)"/>
+  <img id="inn" src="https://dummyimage.com/100x100/c00/fff&text=inn" alt="an inn to get some rest" onclick="resetHealth()"/>
+  <img id="dagger" src="https://dummyimage.com/200x200/ccc/fff&text=dagger" alt="a dagger to pick up" onclick="pickUpItem(hero,{'type':'dagger','damage':2})"/>
+  <img id="bag" src="https://dummyimage.com/300x300/963/fff&text=bag" alt="a bag to take a weapon from" onclick="equipWeapon(hero)"/>
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
