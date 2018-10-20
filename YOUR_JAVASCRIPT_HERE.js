@@ -66,7 +66,6 @@ playerOptions.forEach(function(p) {
   radioItem.id = p.id
   radioItem.name = 'player'
   radioItem.value = p.name
-  radioItem.setAttribute('onclick', 'initGame()')
   radioItem.addEventListener('click', initGame)
 
   let labelItem = document.createElement('label')
@@ -77,3 +76,5 @@ playerOptions.forEach(function(p) {
   heroItem.appendChild(radioItem)
   heroItem.appendChild(labelItem)
 })
+
+displayStats()
