@@ -31,6 +31,21 @@ const resetHealth = function() {
   hero.health = 10;
 };
 
+const fightEnemy = function(hero) {
+  let damage = parseInt(Math.random() * 20);
+  hero.health = Math.max(hero.health-=damage, 0);
+  if (hero.health > 0) {
+    console.log(`Fighting that enemy damaged your health by ${damage}.`);
+    displayStats();
+  } else {
+    console.log("The enemy was stronger than you expected. You died.");
+    displayStats();
+  }
+
+  enemy = document.getElementById('enemy');
+  enemy.remove();
+}
+
 const displayStats = function() {
   let stats = [
     `name: ${hero.name}`,
