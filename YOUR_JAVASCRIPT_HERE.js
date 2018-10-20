@@ -19,3 +19,7 @@ const rest = function(obj) {
 
 const pickUpItem = function() {};
 const equipWeapon = function() {};
+
+const resetHealth = function() {
+  hero.health = 10;
+};
