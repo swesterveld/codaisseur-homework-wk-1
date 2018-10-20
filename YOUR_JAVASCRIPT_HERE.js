@@ -32,11 +32,13 @@ const resetHealth = function() {
 };
 
 const displayStats = function() {
-  console.log(`
-  name: ${hero.name}
-  health: ${hero.health}
-  weapon: ${hero.weapon.type} (damage=${hero.weapon.damage})
-  `);
+  let stats = [
+    `name: ${hero.name}`,
+    `health: ${hero.health}`,
+    `weapon: ${hero.weapon.type} (damage=${hero.weapon.damage})`
+  ]
+  let statistics = document.getElementById('stats')
+  statistics.innerHTML = stats.join('<br />')
 };
 
 // Initialize game with the right settings
