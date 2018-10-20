@@ -2,7 +2,7 @@
 
 // Hero Object
 const hero = {};
-hero.name = 'Corry King';
+hero.name = '';
 hero.heroic = true;
 hero.inventory = [];
 hero.health = 10;
@@ -39,4 +39,15 @@ const displayStats = function() {
   `)
 }
 
-displayStats()
+// Initialize game with the right settings
+const initGame = function() {
+  // Find out which hero has been selected by the player
+  let radios = document.getElementsByName('player')
+  for (i=0; i<radios.length; i++) {
+    if (radios[i].checked) {
+      hero.name = radios[i].value
+      displayStats()
+      break
+    }
+  }
+}
