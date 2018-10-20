@@ -23,6 +23,7 @@ const pickUpItem = function(hero, weapon) {
   hero.inventory.push(weapon);
   console.log("You picked up a " + weapon.type);
   displayStats();
+  document.getElementById(weapon.type).remove();
 };
 
 const equipWeapon = function(hero) {
@@ -51,8 +52,7 @@ const fightEnemy = function(hero) {
     displayStats();
   }
 
-  enemy = document.getElementById('enemy');
-  enemy.remove();
+  document.getElementById('enemy').remove();
 }
 
 const displayStats = function() {
