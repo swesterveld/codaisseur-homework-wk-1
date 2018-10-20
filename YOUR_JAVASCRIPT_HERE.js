@@ -21,7 +21,11 @@ const pickUpItem = function(hero, weapon) {
   hero.inventory.push(weapon);
 };
 
-const equipWeapon = function() {};
+const equipWeapon = function(hero) {
+  if (hero.inventory.length > 0) {
+    hero.weapon = hero.inventory[0];
+  }
+};
 
 const resetHealth = function() {
   hero.health = 10;
